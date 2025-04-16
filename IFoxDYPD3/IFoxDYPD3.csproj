@@ -1,0 +1,56 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;</TargetFrameworks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		
+		<Nullable>enable</Nullable>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<LangVersion>preview</LangVersion>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug'">
+		<DefineConstants>$(Configuration);DEBUG</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'NET48'">
+		<DefineConstants>$(Configuration);acad;a2024</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-windows'">
+		<DefineConstants>$(Configuration);acad;a2025</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'NET48'">
+
+		<PackageReference Include="System.Text.Json" Version="*-*" />
+		<PackageReference Include="IFox.CAD.ACAD" Version="*-*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows'">
+
+		<PackageReference Include="IFox.CAD.ACAD" Version="*-*" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="10.1.1" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+	  <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
+	  <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\IFoxSQLiteCodes\IFoxSQLiteCodes.csproj">
+	    <Private>True</Private>
+	  </ProjectReference>
+	</ItemGroup>
+
+
+</Project>

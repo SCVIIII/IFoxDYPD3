@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "IFoxDYPD3": {
+      "commandName": "Project"
+    },
+    "配置文件 1": {
+      "commandName": "Executable",
+      "executablePath": "D:\\SOFT\\Autodesk\\AutoCAD 2024\\acad.exe"
+    }
+  }
+}

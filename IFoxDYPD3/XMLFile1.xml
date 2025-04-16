@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Databases>
+	<Database alias="DatabaseAlias1" path="MyFirstDatabase.db" />
+	<Database alias="DatabaseAlias2" path="AnotherDatabase.db" />
+	<StartDatabase alias="DatabaseAlias1" />
+</Databases>
+
+	
